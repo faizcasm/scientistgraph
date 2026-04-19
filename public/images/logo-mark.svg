@@ -1,0 +1,15 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ScientistGraph logo mark">
+  <defs>
+    <linearGradient id="g" x1="20" y1="20" x2="220" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f78d1"/>
+      <stop offset="1" stop-color="#2bc49b"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="256" height="256" rx="56" fill="#0f1e2d"/>
+  <circle cx="62" cy="86" r="10" fill="url(#g)"/>
+  <circle cx="126" cy="60" r="9" fill="url(#g)"/>
+  <circle cx="196" cy="88" r="10" fill="url(#g)"/>
+  <circle cx="78" cy="170" r="11" fill="url(#g)"/>
+  <circle cx="154" cy="176" r="12" fill="url(#g)"/>
+  <path d="M62 86L126 60L196 88L154 176L78 170L62 86Z" stroke="url(#g)" stroke-width="8" fill="none"/>
+</svg>
