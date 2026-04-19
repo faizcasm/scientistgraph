@@ -3,51 +3,52 @@ import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services | ScientistGraph",
+  title: "Services | Scholarixa by Global Research Publications",
   description:
-    "Explore ScientistGraph services for research communication, publication strategy, and science outreach.",
+    "Explore Scholarixa services: research writing, publication support, patent filing, SPSS data analysis, thesis support, and academic training.",
   path: "/services",
 });
 
 const services = [
   {
-    title: "Research Development & Publication Support",
+    title: "Research & Publication Support",
     points: [
-      "Manuscript refinement and formatting strategy",
-      "Journal fit analysis and submission planning",
-      "Reviewer-response drafting guidance",
+      "Research and review paper writing",
+      "Manuscript refinement and journal submission",
+      "Publication strategy and reviewer-response guidance",
     ],
   },
   {
-    title: "Thesis & Dissertation Consultancy",
+    title: "Thesis & Dissertation Support",
     points: [
       "Proposal architecture and chapter planning",
       "Data interpretation and methodological review",
-      "Defense deck and viva preparation support",
+      "Defense preparation and viva support",
     ],
   },
   {
-    title: "Mentorship & Methodology Clinics",
+    title: "Patent & IPR Filing",
     points: [
-      "Topic framing and hypothesis strengthening",
-      "Literature map and gap identification",
-      "Research design and validation feedback",
-    ],
-  },
-  {
-    title: "IPR & Innovation Guidance",
-    points: [
+      "National and international patent filing support",
       "Novelty screening and patentability pre-check",
-      "Claim framing and technical drafting support",
-      "Documentation roadmap for filing readiness",
+      "Claim framing and technical documentation",
     ],
   },
   {
-    title: "Workshops & Scholar Programs",
+    title: "Data Analysis (SPSS)",
     points: [
-      "Publication ethics and writing workshops",
-      "Webinars on modern research communication",
-      "Capacity building for early-career scholars",
+      "Professional SPSS data analysis",
+      "Statistical interpretation and reporting",
+      "Research data visualisation",
+    ],
+  },
+  {
+    title: "Training & Academic Development",
+    points: [
+      "Webinars and workshops",
+      "Research methodology training",
+      "SPSS and data analysis courses",
+      "Publication guidance sessions",
     ],
   },
 ];
@@ -60,11 +61,11 @@ export default function ServicesPage() {
           Services
         </p>
         <h1 className="mt-2 font-serif text-4xl font-bold leading-tight md:text-5xl">
-          End-to-End Scientific Communication Support
+          End-to-End Research &amp; Academic Support
         </h1>
         <p className="mt-4 max-w-3xl text-(--sg-muted)">
-          ScientistGraph offers modular and full-lifecycle support for researchers,
-          institutions, and science-first organizations that need clarity, quality, and impact.
+          Scholarixa offers comprehensive support for researchers, students, and professionals —
+          from filing to patent publication, SPSS analysis, and academic training, all in one place.
         </p>
       </section>
 

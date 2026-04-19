@@ -6,9 +6,9 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/articles", label: "Articles" },
   { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Submit Work" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -21,7 +21,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
           <span className="inline-block h-8 w-8 rounded-full bg-[linear-gradient(130deg,var(--sg-accent),#37c4a3)]" />
           <span className="font-serif text-xl font-bold tracking-tight">
-            ScientistGraph
+            Scholarixa
           </span>
         </Link>
 

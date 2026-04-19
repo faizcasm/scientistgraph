@@ -1,149 +1,125 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArticleCard } from "@/components/articles/article-card";
 import { AnimatedReveal } from "@/components/ui/animated-reveal";
-import { getArticleCategories, getFeaturedArticles } from "@/lib/articles";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "ScientistGraph | Visualizing Science, Simplifying Knowledge",
+  title: "Scholarixa by Global Research Publications | From Idea to Publication",
   description:
-    "A modern science publication platform featuring data-driven explainers, discoveries, and editorial analysis.",
+    "Scholarixa provides research writing, publication support, patent filing, SPSS data analysis, and academic training — all in one place.",
   path: "/",
 });
 
 export default function HomePage() {
-  const featuredArticles = getFeaturedArticles(3);
-  const categories = getArticleCategories();
-
   const services = [
     {
-      title: "Research Development & Publication Support",
+      title: "Research & Publication Support",
       description:
-        "Editorial and publication strategy support for scholars preparing journal-ready manuscripts.",
+        "End-to-end support for writing and publishing research or review papers in reputed journals.",
     },
     {
-      title: "Thesis & Dissertation Consultancy",
+      title: "Thesis & Dissertation Support",
       description:
-        "Structured guidance for postgraduate and doctoral research projects from proposal to defense.",
+        "Structured guidance for postgraduate and doctoral research projects from proposal to final submission.",
     },
     {
-      title: "Research Mentorship & Methodology",
+      title: "Patent & IPR Filing",
       description:
-        "Method design, literature architecture, and data interpretation support from domain mentors.",
+        "Support for national and international patent filing, novelty screening, and innovation documentation.",
     },
     {
-      title: "IPR & Innovation Guidance",
+      title: "Data Analysis (SPSS)",
       description:
-        "Knowledge-led support for protecting novel work via patents, copyrights, and innovation documentation.",
+        "Professional SPSS data analysis, statistical interpretation, and research data visualisation.",
     },
     {
-      title: "Scholarly Training Programs",
+      title: "Training & Academic Development",
       description:
-        "Workshops, webinars, and practical sessions to strengthen research communication and ethics.",
+        "Webinars, workshops, research methodology training, SPSS and data analysis courses, and publication guidance sessions.",
     },
   ];
 
-  const verticals = [
-    "Science Explainers",
-    "Research Spotlight",
-    "Academic Publishing Insights",
-    "Innovation & IPR Notes",
-    "ScientistGraph E-Magazine",
+  const whyChooseUs = [
+    "✔ Strong academic and research background",
+    "✔ Personalized guidance for every client",
+    "✔ Affordable and transparent pricing",
+    "✔ Commitment to quality and timely delivery",
+    "✔ A growing community of 1500+ researchers",
   ];
 
-  const valueProps = [
-    "Evidence-first editorial standards",
-    "Expert-guided scientific interpretation",
-    "Transparent workflow from draft to publication",
-    "Clear visual storytelling for complex topics",
-    "Cross-disciplinary science coverage",
-    "Timely delivery with quality reviews",
-  ];
-
-  const impact = [
-    { metric: "220+", label: "Research stories published" },
-    { metric: "95+", label: "Technical explainers produced" },
-    { metric: "80+", label: "Contributors and reviewers" },
-    { metric: "40+", label: "Global institutions represented" },
-    { metric: "1.2M+", label: "Annual reader impressions" },
-  ];
-
-  const process = [
+  const faqs = [
     {
-      step: "01",
-      title: "Discovery & Scope",
-      description:
-        "We map audience intent, topic complexity, and editorial objectives before drafting.",
+      q: "What services does Scholarixa offer?",
+      a: "We offer research writing, publication support, patent filing, SPSS data analysis, thesis support, and academic training.",
     },
     {
-      step: "02",
-      title: "Research Structuring",
-      description:
-        "Sources, narrative arc, and evidence framework are assembled into a publication-ready outline.",
+      q: "How do I submit my work?",
+      a: "You can contact us through our Contact page or WhatsApp to discuss your requirements and submit your work.",
     },
     {
-      step: "03",
-      title: "Expert Review & Refinement",
-      description:
-        "Content quality and scientific fidelity are strengthened through iterative specialist review.",
+      q: "What types of publications do you support?",
+      a: "We support journal articles, review papers, conference papers, theses, dissertations, and patents.",
     },
     {
-      step: "04",
-      title: "Publish & Disseminate",
-      description:
-        "Final content is distributed with SEO optimization and structured metadata for discoverability.",
+      q: "Is my data kept confidential?",
+      a: "Yes, we strictly maintain confidentiality and data privacy.",
+    },
+    {
+      q: "Do you assist with patents internationally?",
+      a: "Yes, we provide support for both national and international patent filing.",
     },
   ];
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ScientistGraph",
-    url: "https://scientistgraph.com",
-    description: "Visualizing Science, Simplifying Knowledge",
+    name: "Scholarixa",
+    url: "https://scholarixa.com",
+    description: "From idea to publication, we handle everything.",
   };
 
   return (
     <main className="mx-auto w-full max-w-6xl px-5 py-10 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
 
+      {/* Hero Section */}
       <section className="relative overflow-hidden rounded-3xl border border-(--sg-border) bg-[linear-gradient(150deg,var(--sg-surface),color-mix(in_oklab,var(--sg-surface)_80%,var(--sg-tint)))] px-6 py-12 md:px-10 md:py-14">
         <AnimatedReveal>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--sg-accent)">
-            ScientistGraph
+            Scholarixa by Global Research Publications
           </p>
           <h1 className="mt-4 max-w-4xl font-serif text-4xl font-bold leading-tight md:text-6xl">
-            Visualizing Science,
-            <br />
-            Simplifying Knowledge
+            Scholarixa by Global Research Publications
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-(--sg-muted) md:text-lg">
-            A modern editorial platform translating complex science into clear, visual,
-            and research-grounded stories for the next generation of curious minds.
+          <p className="mt-3 text-base font-medium text-(--sg-accent) md:text-lg">
+            Research or review paper writing and publication support.
+          </p>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-(--sg-muted) md:text-lg">
+            Filing to patent publication, SPSS analysis, and academic training all in one place.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
-              href="/articles"
+              href="/contact"
               className="rounded-full bg-(--sg-accent) px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95"
             >
-              Explore Articles
+              Submit Your Work
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
             >
-              Our Mission
+              Contact Us Now
             </Link>
           </div>
         </AnimatedReveal>
       </section>
 
+      {/* Trust Badges */}
       <section className="mt-10 grid gap-5 md:grid-cols-3">
         {[
-          "Trusted by researchers, educators, and science communicators",
-          "Original writing and visual-first scientific storytelling",
-          "Built for clarity, rigor, and global scientific literacy",
+          "Trusted by 1500+ researchers, students, and professionals",
+          "From idea to publication — we handle everything",
+          "Affordable, transparent, and academically ethical",
         ].map((item, index) => (
           <AnimatedReveal
             key={item}
@@ -155,33 +131,34 @@ export default function HomePage() {
         ))}
       </section>
 
+      {/* Who We Are */}
       <section className="mt-14 grid gap-8 rounded-3xl border border-(--sg-border) bg-(--sg-surface) p-6 md:grid-cols-[1.2fr_1fr] md:p-8">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
             Who We Are
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold leading-tight">
-            A modern platform for high-integrity scientific communication
+            Academic excellence, made accessible
           </h2>
           <p className="mt-4 text-(--sg-muted)">
-            ScientistGraph bridges rigorous research and public understanding through
-            editorially curated stories, publication guidance insights, and visual narratives
-            designed for real-world impact.
+            Scholarixa by Global Research Publications is an academic platform providing services in research writing,
+            publication support, patent filing, and data analysis. We support every stage of a researcher&apos;s journey.
           </p>
         </div>
         <div className="rounded-2xl border border-(--sg-border) bg-(--sg-bg) p-5 text-sm text-(--sg-muted)">
           <p>
-            We focus on clear interpretation, methodological transparency, and responsible
-            science reporting so readers can trust both the narrative and the evidence.
+            From idea to publications we handle everything — our tagline reflects our commitment to guiding
+            researchers from their very first idea through to successful publication, patent, or academic achievement.
           </p>
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="mt-14">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
           Our Services
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-bold">Research & Publication Support</h2>
+        <h2 className="mt-2 font-serif text-3xl font-bold">Research &amp; Publication Support</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (
             <AnimatedReveal
@@ -196,29 +173,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-14 rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-6 md:p-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Key Verticals
-        </p>
-        <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-          {verticals.map((vertical) => (
-            <div
-              key={vertical}
-              className="rounded-xl border border-(--sg-border) bg-(--sg-bg) px-4 py-3 text-sm font-medium"
-            >
-              {vertical}
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* Why Choose Us */}
       <section className="mt-14">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
           Why Choose Us
         </p>
         <h2 className="mt-2 font-serif text-3xl font-bold">Precision, Ethics, and Clarity</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {valueProps.map((item, index) => (
+          {whyChooseUs.map((item, index) => (
             <AnimatedReveal
               key={item}
               delay={index * 0.05}
@@ -230,131 +192,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Our Community */}
       <section className="mt-14 rounded-2xl border border-(--sg-border) bg-[linear-gradient(155deg,var(--sg-surface),color-mix(in_oklab,var(--sg-tint)_48%,var(--sg-surface)))] p-6 md:p-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Our Impact
+          Our Community
         </p>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {impact.map((item) => (
-            <div key={item.label} className="rounded-xl border border-(--sg-border) bg-(--sg-surface) p-4">
-              <p className="font-serif text-3xl font-bold">{item.metric}</p>
-              <p className="mt-1 text-sm text-(--sg-muted)">{item.label}</p>
-            </div>
-          ))}
-        </div>
+        <h2 className="mt-2 font-serif text-3xl font-bold">1500+ Researchers &amp; Growing</h2>
+        <p className="mt-4 max-w-3xl text-(--sg-muted)">
+          We are proud to have built a strong and active academic network through our WhatsApp community,
+          connecting over 1500+ researchers, students, and professionals. This platform now extends that
+          community into a structured and scalable digital ecosystem.
+        </p>
       </section>
 
+      {/* Quality & Ethics */}
       <section className="mt-14 rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-6 md:p-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Collaboration Network
+          Commitment to Quality &amp; Ethics
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {[
-            "University Labs",
-            "Independent Research Groups",
-            "Health & Life Sciences Teams",
-            "Data Science Communities",
-            "Innovation Cells",
-            "Publication Partners",
-          ].map((partner) => (
-            <span
-              key={partner}
-              className="rounded-full border border-(--sg-border) bg-(--sg-bg) px-3 py-1.5 text-xs font-medium text-(--sg-muted)"
-            >
-              {partner}
-            </span>
-          ))}
-        </div>
+        <h2 className="mt-2 font-serif text-3xl font-bold">Academic Integrity First</h2>
+        <p className="mt-4 max-w-3xl text-(--sg-muted)">
+          At Scholarixa, we strictly adhere to academic integrity, ethical research practices, and
+          originality standards. We aim to support—not replace—the researcher&apos;s work, ensuring that
+          every project maintains authenticity and scientific credibility.
+        </p>
       </section>
 
+      {/* FAQs */}
       <section className="mt-14">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Our Process
+          FAQs
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-bold">
-          A Structured Path from Concept to Publication
-        </h2>
+        <h2 className="mt-2 font-serif text-3xl font-bold">Frequently Asked Questions</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-2">
-          {process.map((item, index) => (
+          {faqs.map((faq, index) => (
             <AnimatedReveal
-              key={item.step}
-              delay={index * 0.08}
+              key={faq.q}
+              delay={index * 0.06}
               className="rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-5"
             >
-              <p className="text-xs font-semibold tracking-[0.14em] text-(--sg-accent)">
-                {item.step}
-              </p>
-              <h3 className="mt-2 font-serif text-2xl font-bold">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-(--sg-muted)">{item.description}</p>
+              <h3 className="font-serif text-lg font-bold leading-tight">{faq.q}</h3>
+              <p className="mt-3 text-sm leading-6 text-(--sg-muted)">{faq.a}</p>
             </AnimatedReveal>
           ))}
         </div>
       </section>
 
-      <section className="mt-14">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-              Featured
-            </p>
-            <h2 className="mt-2 font-serif text-3xl font-bold">
-              This Week in Science
-            </h2>
-          </div>
-          <Link href="/articles" className="text-sm font-medium text-(--sg-accent)">
-            View all stories
-          </Link>
-        </div>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {featuredArticles.map((article, index) => (
-            <AnimatedReveal key={article.slug} delay={index * 0.08}>
-              <ArticleCard article={article} />
-            </AnimatedReveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-14 rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-6 md:p-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Browse by category
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <Link
-              key={category}
-              href="/articles"
-              className="rounded-full border border-(--sg-border) px-3.5 py-1.5 text-sm transition hover:border-(--sg-accent) hover:text-(--sg-accent)"
-            >
-              {category}
-            </Link>
-          ))}
-        </div>
-      </section>
-
+      {/* CTA */}
       <section className="mt-14 rounded-3xl border border-(--sg-border) bg-(--sg-surface) px-6 py-10 text-center md:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Ready to Publish Better Science Stories?
+          Get Started Today
         </p>
         <h2 className="mt-3 font-serif text-3xl font-bold md:text-4xl">
-          Join ScientistGraph and elevate your research communication
+          Start Your Research Journey Today
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-(--sg-muted)">
-          Build visibility, credibility, and impact with editorially strong and
-          scientifically grounded content.
+          Get expert support for your research, publication, patents, and data analysis.
         </p>
         <div className="mt-7 flex flex-wrap justify-center gap-3">
           <Link
             href="/contact"
             className="rounded-full bg-(--sg-accent) px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95"
           >
-            Book a Consultation
+            Submit Your Work
           </Link>
           <Link
-            href="/articles"
+            href="/contact"
             className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
           >
-            Explore Resources
+            Contact Us Now
           </Link>
         </div>
       </section>
