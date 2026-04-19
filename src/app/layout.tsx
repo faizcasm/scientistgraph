@@ -17,16 +17,16 @@ const serif = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "ScientistGraph",
+    default: "Scholarixa by Global Research Publications",
     template: "%s",
   },
-  description: "ScientistGraph is a modern publication platform for science explainers and insight.",
-  metadataBase: new URL("https://scientistgraph.com"),
+  description: "Scholarixa by Global Research Publications — From idea to publication, we handle everything. Research writing, publication support, patent filing, and data analysis.",
+  metadataBase: new URL("https://scholarixa.com"),
   openGraph: {
-    title: "ScientistGraph",
-    description: "Visualizing Science, Simplifying Knowledge",
-    url: "https://scientistgraph.com",
-    siteName: "ScientistGraph",
+    title: "Scholarixa by Global Research Publications",
+    description: "From idea to publication, we handle everything.",
+    url: "https://scholarixa.com",
+    siteName: "Scholarixa",
     type: "website",
   },
 };

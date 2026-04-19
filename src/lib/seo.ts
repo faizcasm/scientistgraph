@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const baseUrl = "https://scientistgraph.com";
+const baseUrl = "https://scholarixa.com";
 
 export function buildMetadata({
   title,
@@ -23,7 +23,7 @@ export function buildMetadata({
       title,
       description,
       url: `${baseUrl}${path}`,
-      siteName: "ScientistGraph",
+      siteName: "Scholarixa",
     },
     twitter: {
       card: "summary_large_image",
@@ -61,7 +61,7 @@ export function buildArticleJsonLd({
     },
     publisher: {
       "@type": "Organization",
-      name: "ScientistGraph",
+      name: "Scholarixa",
       logo: {
         "@type": "ImageObject",
         url: `${baseUrl}/images/logo-mark.svg`,
