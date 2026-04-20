@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { buildMetadata } from "@/lib/seo";
 
@@ -84,6 +85,35 @@ export default function ServicesPage() {
             </ul>
           </AnimatedReveal>
         ))}
+      </section>
+
+      {/* CTA */}
+      <section className="mt-14 rounded-3xl border border-(--sg-border) bg-[linear-gradient(150deg,var(--sg-surface),color-mix(in_oklab,var(--sg-tint)_40%,var(--sg-surface)))] px-6 py-10 text-center md:px-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
+          Get Started
+        </p>
+        <h2 className="mt-3 font-serif text-3xl font-bold md:text-4xl">
+          Ready to Get Started?
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-(--sg-muted)">
+          Turn your research idea into a successful publication or innovation. Our experts are ready to help.
+        </p>
+        <div className="mt-7 flex flex-wrap justify-center gap-3">
+          <Link
+            href="/contact"
+            className="rounded-full bg-(--sg-accent) px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95"
+          >
+            Submit Your Work Now
+          </Link>
+          <a
+            href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
+          >
+            Chat with Us on WhatsApp
+          </a>
+        </div>
       </section>
     </main>
   );
