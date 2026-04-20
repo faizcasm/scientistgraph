@@ -408,7 +408,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
           >
-            Contact Us Now
+            Chat with Us on WhatsApp
           </a>
         </div>
       </section>
