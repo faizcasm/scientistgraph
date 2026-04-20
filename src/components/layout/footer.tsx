@@ -23,6 +23,7 @@ export function Footer() {
             <li><Link href="/services" className="hover:text-(--sg-accent)">Services</Link></li>
             <li><Link href="/faq" className="hover:text-(--sg-accent)">FAQ</Link></li>
             <li><Link href="/resources" className="hover:text-(--sg-accent)">Resources</Link></li>
+            <li><Link href="/testimonials" className="hover:text-(--sg-accent)">Testimonials</Link></li>
             <li><Link href="/contact" className="hover:text-(--sg-accent)">Submit Work</Link></li>
             <li><Link href="/contact" className="hover:text-(--sg-accent)">Contact</Link></li>
           </ul>

@@ -227,7 +227,7 @@ export default function HomePage() {
           <div>
             <h3 className="font-serif text-2xl font-bold leading-tight">Abrar Ahmad Zargar</h3>
             <p className="mt-1 text-sm font-semibold text-(--sg-accent)">
-              Assistant Professor | Clinical Researcher | Academic Consultant
+              Founder of Scholarixa
             </p>
             <p className="mt-1 text-xs text-(--sg-muted)">Scholarixa by Global Research Publications</p>
             <p className="mt-4 leading-7 text-(--sg-muted)">
@@ -354,9 +354,8 @@ export default function HomePage() {
         </ul>
         <div className="mt-6">
           <a
-            href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/resources/research-guide.pdf"
+            download="research-guide.pdf"
             className="rounded-full bg-(--sg-accent) px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95"
           >
             Download Now

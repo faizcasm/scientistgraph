@@ -69,7 +69,7 @@ export default function AboutPage() {
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold">Abrar Ahmad Zargar</h2>
           <p className="mt-1 text-sm font-semibold text-(--sg-accent)">
-            Assistant Professor | Clinical Researcher | Academic Consultant
+            Founder of Scholarixa
           </p>
         </AnimatedReveal>
 
