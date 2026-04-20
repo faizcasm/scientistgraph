@@ -21,6 +21,8 @@ export function Footer() {
             <li><Link href="/" className="hover:text-(--sg-accent)">Home</Link></li>
             <li><Link href="/about" className="hover:text-(--sg-accent)">About</Link></li>
             <li><Link href="/services" className="hover:text-(--sg-accent)">Services</Link></li>
+            <li><Link href="/faq" className="hover:text-(--sg-accent)">FAQ</Link></li>
+            <li><Link href="/resources" className="hover:text-(--sg-accent)">Resources</Link></li>
             <li><Link href="/contact" className="hover:text-(--sg-accent)">Submit Work</Link></li>
             <li><Link href="/contact" className="hover:text-(--sg-accent)">Contact</Link></li>
           </ul>
@@ -43,8 +45,26 @@ export function Footer() {
             Contact
           </h4>
           <ul className="mt-3 space-y-2 text-sm text-(--sg-muted)">
-            <li>Email: your@email.com</li>
-            <li>WhatsApp: +91XXXXXXXXXX</li>
+            <li>
+              <a href="mailto:globalresearchpublications809@gmail.com" className="hover:text-(--sg-accent)">
+                globalresearchpublications809@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+917889461084" className="hover:text-(--sg-accent)">
+                +91-7889461084
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-(--sg-accent)"
+              >
+                Join WhatsApp Community
+              </a>
+            </li>
           </ul>
         </div>
       </div>

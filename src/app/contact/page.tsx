@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact | ScientistGraph",
-  description: "Reach the ScientistGraph editorial team.",
+  title: "Contact | Scholarixa by Global Research Publications",
+  description: "Submit your work or get in touch with Scholarixa for research writing, publication support, patent filing, and data analysis.",
   path: "/contact",
 });
 
@@ -16,12 +16,40 @@ export default function ContactPage() {
           Contact
         </p>
         <h1 className="mt-2 font-serif text-4xl font-bold leading-tight">
-          Let&apos;s talk science communication
+          Submit Your Work or Get in Touch
         </h1>
         <p className="mt-4 text-(--sg-muted)">
-          Have a story idea, collaboration request, or editorial feedback? Send us a
-          message and our team will reply shortly.
+          Share your research requirements, manuscript, or idea and our team will respond promptly with a clear plan.
         </p>
+
+        <div className="mt-8 space-y-3 text-sm text-(--sg-muted)">
+          <p>
+            📧{" "}
+            <a
+              href="mailto:globalresearchpublications809@gmail.com"
+              className="hover:text-(--sg-accent)"
+            >
+              globalresearchpublications809@gmail.com
+            </a>
+          </p>
+          <p>
+            📞{" "}
+            <a href="tel:+917889461084" className="hover:text-(--sg-accent)">
+              +91-7889461084
+            </a>
+          </p>
+          <p>
+            💬{" "}
+            <a
+              href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-(--sg-accent)"
+            >
+              Join Our WhatsApp Community
+            </a>
+          </p>
+        </div>
       </section>
 
       <ContactForm />

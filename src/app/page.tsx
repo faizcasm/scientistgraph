@@ -41,25 +41,72 @@ export default function HomePage() {
   ];
 
   const whyChooseUs = [
-    "✔ Strong academic and research background",
-    "✔ Personalized guidance for every client",
-    "✔ Affordable and transparent pricing",
-    "✔ Commitment to quality and timely delivery",
-    "✔ A growing community of 1500+ researchers",
+    {
+      title: "Expert Academic Guidance",
+      desc: "Strong research background across pharmacy, clinical sciences, and interdisciplinary domains.",
+    },
+    {
+      title: "Trusted by 1500+ Researchers",
+      desc: "A growing academic community built on trust, results, and long-term relationships.",
+    },
+    {
+      title: "End-to-End Support",
+      desc: "From idea to publication — we handle writing, analysis, formatting, submission, and patent filing.",
+    },
+    {
+      title: "Affordable & Transparent Pricing",
+      desc: "Student-friendly pricing with no hidden charges. Clear timelines and deliverables upfront.",
+    },
+    {
+      title: "Timely Delivery",
+      desc: "Dedicated support ensuring your work is completed and delivered on schedule, every time.",
+    },
+    {
+      title: "Personalized Assistance",
+      desc: "Every project receives individual attention tailored to your field, goals, and requirements.",
+    },
+  ];
+
+  const howItWorks = [
+    {
+      step: "01",
+      title: "Submit Your Requirement",
+      desc: "Share your manuscript, data, or idea through our submission form or WhatsApp.",
+    },
+    {
+      step: "02",
+      title: "Expert Consultation",
+      desc: "Our team reviews your requirement and provides a clear, personalised plan.",
+    },
+    {
+      step: "03",
+      title: "Work Execution",
+      desc: "We begin writing, analysis, formatting, or patent drafting based on your needs.",
+    },
+    {
+      step: "04",
+      title: "Review & Revisions",
+      desc: "You receive updates and can request modifications until fully satisfied.",
+    },
+    {
+      step: "05",
+      title: "Final Delivery / Submission",
+      desc: "Completed work is delivered or submitted directly for publication or patent filing.",
+    },
   ];
 
   const faqs = [
     {
-      q: "What services does Scholarixa offer?",
-      a: "We offer research writing, publication support, patent filing, SPSS data analysis, thesis support, and academic training.",
+      q: "Do you guarantee publication?",
+      a: "We provide complete support for writing, formatting, and submission. Final acceptance depends on the journal review process.",
     },
     {
-      q: "How do I submit my work?",
-      a: "You can contact us through our Contact page or WhatsApp to discuss your requirements and submit your work.",
+      q: "What is the typical timeline for services?",
+      a: "Timelines vary depending on the service, generally ranging from 1 to 4 weeks.",
     },
     {
-      q: "What types of publications do you support?",
-      a: "We support journal articles, review papers, conference papers, theses, dissertations, and patents.",
+      q: "Do you provide SPSS analysis with interpretation?",
+      a: "Yes, we provide complete statistical analysis along with detailed interpretation.",
     },
     {
       q: "Is my data kept confidential?",
@@ -105,12 +152,14 @@ export default function HomePage() {
             >
               Submit Your Work
             </Link>
-            <Link
-              href="/contact"
+            <a
+              href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
             >
-              Contact Us Now
-            </Link>
+              Chat with Us on WhatsApp
+            </a>
           </div>
         </AnimatedReveal>
       </section>
@@ -167,7 +216,7 @@ export default function HomePage() {
             <div className="relative h-44 w-44 overflow-hidden rounded-full border-4 border-(--sg-accent) shadow-xl ring-4 ring-(--sg-border)">
               <Image
                 src="/images/author.jpg"
-                alt="Founder of Scholarixa"
+                alt="Abrar Ahmad Zargar — Founder of Scholarixa"
                 fill
                 className="object-cover object-top"
                 sizes="176px"
@@ -176,13 +225,17 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-            <h3 className="font-serif text-2xl font-bold leading-tight">Founder &amp; Academic Director</h3>
-            <p className="mt-1 text-sm font-semibold text-(--sg-accent)">Scholarixa by Global Research Publications</p>
+            <h3 className="font-serif text-2xl font-bold leading-tight">Abrar Ahmad Zargar</h3>
+            <p className="mt-1 text-sm font-semibold text-(--sg-accent)">
+              Assistant Professor | Clinical Researcher | Academic Consultant
+            </p>
+            <p className="mt-1 text-xs text-(--sg-muted)">Scholarixa by Global Research Publications</p>
             <p className="mt-4 leading-7 text-(--sg-muted)">
-              With a deep passion for academic excellence and research innovation, the founder of Scholarixa
-              built this platform to make high-quality research support accessible to every student,
-              researcher, and professional. From guiding thousands through the WhatsApp community to
-              building a full-fledged academic platform, the vision has always been clear — <em>from idea to publication, we handle everything</em>.
+              Abrar Ahmad Zargar is a dedicated researcher in the field of Pharmacy Practice with a
+              strong focus on clinical pharmacology, public health, and translational research. Driven
+              by a vision to simplify research and empower scholars, he founded Scholarixa to provide
+              structured, ethical, and high-quality academic support — bridging the gap between
+              research ideas and successful publication, innovation, and real-world application.
             </p>
           </div>
         </AnimatedReveal>
@@ -213,44 +266,102 @@ export default function HomePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
           Why Choose Us
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-bold">Precision, Ethics, and Clarity</h2>
+        <h2 className="mt-2 font-serif text-3xl font-bold">Why Choose Scholarixa</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {whyChooseUs.map((item, index) => (
             <AnimatedReveal
-              key={item}
+              key={item.title}
               delay={index * 0.05}
-              className="rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-5 text-sm text-(--sg-muted)"
+              className="rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-5"
             >
-              {item}
+              <h3 className="font-serif text-lg font-bold leading-tight">✔ {item.title}</h3>
+              <p className="mt-2 text-sm text-(--sg-muted)">{item.desc}</p>
             </AnimatedReveal>
           ))}
         </div>
       </section>
 
-      {/* Our Community */}
-      <section className="mt-14 rounded-2xl border border-(--sg-border) bg-[linear-gradient(155deg,var(--sg-surface),color-mix(in_oklab,var(--sg-tint)_48%,var(--sg-surface)))] p-6 md:p-8">
+      {/* How It Works */}
+      <section className="mt-14">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Our Community
+          How It Works
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-bold">1500+ Researchers &amp; Growing</h2>
-        <p className="mt-4 max-w-3xl text-(--sg-muted)">
-          We are proud to have built a strong and active academic network through our WhatsApp community,
-          connecting over 1500+ researchers, students, and professionals. This platform now extends that
-          community into a structured and scalable digital ecosystem.
-        </p>
+        <h2 className="mt-2 font-serif text-3xl font-bold">From Idea to Publication in 5 Steps</h2>
+        <div className="mt-6 flex flex-col gap-0">
+          {howItWorks.map((step, index) => (
+            <AnimatedReveal
+              key={step.step}
+              delay={index * 0.06}
+              className="relative flex gap-5 pb-8 last:pb-0"
+            >
+              <div className="flex flex-col items-center">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-(--sg-accent) text-sm font-bold text-white">
+                  {step.step}
+                </div>
+                {index < howItWorks.length - 1 && (
+                  <div className="mt-1 w-px flex-1 bg-(--sg-border)" />
+                )}
+              </div>
+              <div className="pb-4">
+                <h3 className="font-serif text-xl font-bold leading-tight">{step.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-(--sg-muted)">{step.desc}</p>
+              </div>
+            </AnimatedReveal>
+          ))}
+        </div>
       </section>
 
-      {/* Quality & Ethics */}
-      <section className="mt-14 rounded-2xl border border-(--sg-border) bg-(--sg-surface) p-6 md:p-8">
+      {/* CTA Mid-page */}
+      <section className="mt-14 rounded-3xl border border-(--sg-border) bg-[linear-gradient(150deg,var(--sg-surface),color-mix(in_oklab,var(--sg-tint)_40%,var(--sg-surface)))] px-6 py-10 text-center md:px-10">
+        <h2 className="font-serif text-3xl font-bold md:text-4xl">Ready to Get Started?</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-(--sg-muted)">
+          Turn your research idea into a successful publication or innovation.
+        </p>
+        <div className="mt-7 flex flex-wrap justify-center gap-3">
+          <Link
+            href="/contact"
+            className="rounded-full bg-(--sg-accent) px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95"
+          >
+            Submit Your Work Now
+          </Link>
+          <a
+            href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
+          >
+            Chat with Us on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* Free Resources */}
+      <section className="mt-14 rounded-3xl border border-(--sg-border) bg-(--sg-surface) p-6 md:p-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
-          Commitment to Quality &amp; Ethics
+          Free Resource
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-bold">Academic Integrity First</h2>
-        <p className="mt-4 max-w-3xl text-(--sg-muted)">
-          At Scholarixa, we strictly adhere to academic integrity, ethical research practices, and
-          originality standards. We aim to support—not replace—the researcher&apos;s work, ensuring that
-          every project maintains authenticity and scientific credibility.
+        <h2 className="mt-2 font-serif text-3xl font-bold">Free Guide for Researchers</h2>
+        <p className="mt-2 text-base font-medium text-(--sg-accent)">
+          How to Publish Your Research in Scopus-Indexed Journals
         </p>
+        <p className="mt-4 max-w-2xl text-(--sg-muted)">
+          Download our free guide and learn:
+        </p>
+        <ul className="mt-3 space-y-1 text-sm text-(--sg-muted)">
+          <li>— Journal selection strategies</li>
+          <li>— Manuscript preparation tips</li>
+          <li>— Common mistakes to avoid</li>
+        </ul>
+        <div className="mt-6">
+          <a
+            href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-(--sg-accent) px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95"
+          >
+            Download Now
+          </a>
+        </div>
       </section>
 
       {/* FAQs */}
@@ -291,12 +402,14 @@ export default function HomePage() {
           >
             Submit Your Work
           </Link>
-          <Link
-            href="/contact"
+          <a
+            href="https://chat.whatsapp.com/IIrMuQvMHqF5DrQMK17qrM"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-(--sg-border) px-5 py-2.5 text-sm font-semibold transition hover:border-(--sg-accent)"
           >
             Contact Us Now
-          </Link>
+          </a>
         </div>
       </section>
     </main>
