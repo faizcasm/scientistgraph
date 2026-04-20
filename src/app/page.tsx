@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { buildMetadata } from "@/lib/seo";
@@ -151,6 +152,40 @@ export default function HomePage() {
             researchers from their very first idea through to successful publication, patent, or academic achievement.
           </p>
         </div>
+      </section>
+
+      {/* Meet the Founder */}
+      <section className="mt-14">
+        <AnimatedReveal>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-(--sg-accent)">
+            Meet the Founder
+          </p>
+          <h2 className="mt-2 font-serif text-3xl font-bold">The Mind Behind Scholarixa</h2>
+        </AnimatedReveal>
+        <AnimatedReveal delay={0.1} className="mt-6 flex flex-col items-center gap-8 rounded-3xl border border-(--sg-border) bg-(--sg-surface) p-6 md:flex-row md:p-8">
+          <div className="shrink-0">
+            <div className="relative h-44 w-44 overflow-hidden rounded-full border-4 border-(--sg-accent) shadow-xl ring-4 ring-(--sg-border)">
+              <Image
+                src="/images/author.jpg"
+                alt="Founder of Scholarixa"
+                fill
+                className="object-cover object-top"
+                sizes="176px"
+                priority
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="font-serif text-2xl font-bold leading-tight">Founder &amp; Academic Director</h3>
+            <p className="mt-1 text-sm font-semibold text-(--sg-accent)">Scholarixa by Global Research Publications</p>
+            <p className="mt-4 leading-7 text-(--sg-muted)">
+              With a deep passion for academic excellence and research innovation, the founder of Scholarixa
+              built this platform to make high-quality research support accessible to every student,
+              researcher, and professional. From guiding thousands through the WhatsApp community to
+              building a full-fledged academic platform, the vision has always been clear — <em>from idea to publication, we handle everything</em>.
+            </p>
+          </div>
+        </AnimatedReveal>
       </section>
 
       {/* Services Section */}
